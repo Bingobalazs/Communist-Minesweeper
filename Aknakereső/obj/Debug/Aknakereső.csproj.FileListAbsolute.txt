@@ -1,0 +1,15 @@
+C:\Users\baluv\source\repos\Aknakereső\Aknakereső\bin\Debug\Aknakereső.exe.config
+C:\Users\baluv\source\repos\Aknakereső\Aknakereső\bin\Debug\Aknakereső.exe
+C:\Users\baluv\source\repos\Aknakereső\Aknakereső\bin\Debug\Aknakereső.pdb
+C:\Users\baluv\source\repos\Aknakereső\Aknakereső\obj\Debug\Aknakereső.csproj.AssemblyReference.cache
+C:\Users\baluv\source\repos\Aknakereső\Aknakereső\obj\Debug\Aknakereső.csproj.SuggestedBindingRedirects.cache
+C:\Users\baluv\source\repos\Aknakereső\Aknakereső\obj\Debug\MainWindow.baml
+C:\Users\baluv\source\repos\Aknakereső\Aknakereső\obj\Debug\MainWindow.g.cs
+C:\Users\baluv\source\repos\Aknakereső\Aknakereső\obj\Debug\App.g.cs
+C:\Users\baluv\source\repos\Aknakereső\Aknakereső\obj\Debug\Aknakereső_MarkupCompile.cache
+C:\Users\baluv\source\repos\Aknakereső\Aknakereső\obj\Debug\Aknakereső.g.resources
+C:\Users\baluv\source\repos\Aknakereső\Aknakereső\obj\Debug\Aknakereső.Properties.Resources.resources
+C:\Users\baluv\source\repos\Aknakereső\Aknakereső\obj\Debug\Aknakereső.csproj.GenerateResource.cache
+C:\Users\baluv\source\repos\Aknakereső\Aknakereső\obj\Debug\Aknakereső.csproj.CoreCompileInputs.cache
+C:\Users\baluv\source\repos\Aknakereső\Aknakereső\obj\Debug\Aknakereső.exe
+C:\Users\baluv\source\repos\Aknakereső\Aknakereső\obj\Debug\Aknakereső.pdb

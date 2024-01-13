@@ -64,6 +64,7 @@ namespace Minesweeper
                         Height = 40,
                         Margin = new Thickness(2),
                         Tag = new Tuple<int, int>(i, j)
+                        
                     };
 
                     button.Click += Button_Click;
@@ -81,7 +82,15 @@ namespace Minesweeper
             Tuple<int, int> coordinates = (Tuple<int, int>)button.Tag;
             int row = coordinates.Item1;
             int col = coordinates.Item2;
-            button.Content = "F";
+            if (button.Content=="F" )
+            {
+                button.Content=null;
+            }
+            else if (button.Content == null)
+            {
+                button.Content = "F";
+            }
+            
                 /* new Image
             {
                 Source = new BitmapImage(new Uri("/WpfApplication1;component/image/add.jpg", UriKind.Relative)),
@@ -100,13 +109,12 @@ namespace Minesweeper
 
             if (mineGrid[row, col])
             {
-                MessageBox.Show("Game Over! You clicked on a mine.");
+                MessageBox.Show("Kulákot találtál! Játék vége");
                 InitializeGame();
             }
             else
             {
-                // Implement logic for revealing adjacent cells
-                // For simplicity, you can just update the button content to indicate the number of adjacent mines.
+                
                 int adjacentMines = CountAdjacentMines(row, col);
                 button.Content = adjacentMines.ToString();
             }

@@ -126,7 +126,7 @@ namespace Minesweeper
 
             if (mineGrid[row, col])
             {
-                MessageBox.Show("Kulákot találtál! Játék vége");
+                MessageBox.Show("Kulákot találtál! Játék vége", "GAME OVER", MessageBoxButton.OK, MessageBoxImage.Error);
                 InitializeGame();
             }
             else

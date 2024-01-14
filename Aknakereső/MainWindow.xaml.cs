@@ -53,6 +53,8 @@ namespace Minesweeper
         private void CreateGridButtons()
         {
             gridButtons = new Button[Rows, Columns];
+            var bc = new BrushConverter();
+
 
             for (int i = 0; i < Rows; i++)
             {
@@ -63,8 +65,12 @@ namespace Minesweeper
                         Width = 40,
                         Height = 40,
                         Margin = new Thickness(2),
-                        Tag = new Tuple<int, int>(i, j)
-                        
+                        Tag = new Tuple<int, int>(i, j),
+                        Background = (Brush)bc.ConvertFrom("#db1017"),
+                        BorderBrush = null,
+                        FontFamily = new FontFamily("Impact"),
+                        FontSize = 30
+
                     };
 
                     button.Click += Button_Click;
@@ -82,23 +88,34 @@ namespace Minesweeper
             Tuple<int, int> coordinates = (Tuple<int, int>)button.Tag;
             int row = coordinates.Item1;
             int col = coordinates.Item2;
-            if (button.Content=="F" )
-            {
-                button.Content=null;
-            }
-            else if (button.Content == null)
-            {
-                button.Content = "F";
-            }
             
-                /* new Image
+            if (button.Content == null)
             {
-                Source = new BitmapImage(new Uri("/WpfApplication1;component/image/add.jpg", UriKind.Relative)),
-                VerticalAlignment = VerticalAlignment.Center,
-                Stretch = Stretch.Fill,
-                Height = 256,
-                Width = 256
-            }; */
+                button.Content = new Image
+                {
+                    Source = new BitmapImage(new Uri("/flag1.png", UriKind.Relative)),
+                    VerticalAlignment = VerticalAlignment.Center,
+                    HorizontalAlignment = HorizontalAlignment.Center,
+                    Stretch = Stretch.Fill,
+                    Height = 25,
+                    Width = 25,
+                    ToolTip ="Megjelölve"
+                };
+            }
+            else if ((button.Content).GetType() == typeof(System.Windows.Controls.Image))
+            {
+                button.Content = null;
+                button.ToolTip = null;
+            }
+
+            /* new Image
+        {
+            Source = new BitmapImage(new Uri("/WpfApplication1;component/image/add.jpg", UriKind.Relative)),
+            VerticalAlignment = VerticalAlignment.Center,
+            Stretch = Stretch.Fill,
+            Height = 256,
+            Width = 256
+        }; */
         }
         private void Button_Click(object sender, RoutedEventArgs e)
         {

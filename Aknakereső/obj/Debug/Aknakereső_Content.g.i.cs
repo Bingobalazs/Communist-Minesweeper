@@ -8,6 +8,6 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("flag1.png")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("r%c3%a1kosi_m%c3%a1ty%c3%a1s_al%c3%a1%c3%adr%c3%a1sa.svg.png")]
 
 

@@ -27,6 +27,8 @@ namespace Minesweeper
         {
             mineGrid = GenerateMineGrid();
             CreateGridButtons();
+            backgroundMusic.Open(new Uri(String.Format("{0}\\redalert.mp3", AppDomain.CurrentDomain.BaseDirectory)));
+            backgroundMusic.Play();
         }
 
         private bool[,] GenerateMineGrid()
@@ -66,7 +68,8 @@ namespace Minesweeper
                         Height = 40,
                         Margin = new Thickness(2),
                         Tag = new Tuple<int, int>(i, j),
-                        Background = (Brush)bc.ConvertFrom("#db1017"),
+                        Background = (Brush)bc.ConvertFrom("#aa1921"),
+                        Foreground = (Brush)bc.ConvertFrom("#fccb39"),
                         BorderBrush = null,
                         FontFamily = new FontFamily("Soviet"),
                         FontSize = 30
@@ -123,6 +126,8 @@ namespace Minesweeper
             Tuple<int, int> coordinates = (Tuple<int, int>)button.Tag;
             int row = coordinates.Item1;
             int col = coordinates.Item2;
+            var bc = new BrushConverter();
+
 
             if (mineGrid[row, col])
             {
@@ -134,6 +139,14 @@ namespace Minesweeper
                 
                 int adjacentMines = CountAdjacentMines(row, col);
                 button.Content = adjacentMines.ToString();
+                button.Background = (Brush)bc.ConvertFrom("#1d1d1b");
+
+                if (adjacentMines==0)
+                {
+                    button.Content = " ";
+
+                }
+
             }
         }
 
@@ -154,5 +167,8 @@ namespace Minesweeper
 
             return count;
         }
+
+        private MediaPlayer backgroundMusic = new MediaPlayer();
+
     }
 }

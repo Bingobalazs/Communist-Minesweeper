@@ -1,0 +1,39 @@
+﻿<Window x:Class="Aknakereső.Window1"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Aknakereső"
+        mc:Ignorable="d"
+        Title="Levél" Height="615" Width="800" Icon="/flag1.png" Background="#FFCCC0B2" WindowStartupLocation="CenterScreen" ResizeMode="NoResize" Cursor="Pen">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="47*"/>
+            <ColumnDefinition Width="113*"/>
+        </Grid.ColumnDefinitions>
+        <RichTextBox Margin="72,109,72,40" Background="#FFCCC0B2" BorderBrush="{x:Null}" FontFamily="Courier New" Grid.ColumnSpan="2">
+            <FlowDocument>
+                <Paragraph TextAlignment="Center" FontSize="16">
+                    <Run Text="Megszaporodtak az államellenes cselekmények, sajnos a kulákok egyre többen vannak és egyre nagyobb tőkét halmoznak fel. Úgy gondolják ők irányíthatják a monkás embereket. De ez nem így van, mi nem hagyjuk!
+"/>
+                </Paragraph>
+
+                <Paragraph FontSize="20" FontWeight="Bold" TextAlignment="Center">
+                    <Run Text="Kulákfelderítő akciót hirdetünk!"/>
+                </Paragraph>
+
+                <Paragraph TextAlignment="Center" FontSize="16">
+                    <Run Text="Tudomásunkra jutott sajnos hogy egyes kulákok robbanószert állítottak elő. Az ön feladata lesz felderíteni és megjelölni ezeket, hogy más ÁVH egységek könnyen likvidálhassák a párt nevében. De vigyázzon! Nehogy felrobbantsák! 
+"/>
+                </Paragraph>
+
+
+            </FlowDocument>
+        </RichTextBox>
+        <TextBlock HorizontalAlignment="Left" Margin="40,39,0,0" TextWrapping="Wrap" Text="Drága Elvtárs!" VerticalAlignment="Top" FontFamily="Courier New" FontWeight="Bold" FontSize="20"/>
+        <TextBlock HorizontalAlignment="Left" Margin="174,399,0,0" TextWrapping="Wrap" VerticalAlignment="Top" FontFamily="Courier New" FontWeight="Bold" FontSize="20" Width="391" Text="Jó munkát kíván:" Grid.Column="1"/>
+        <Button Content="Vár a munka!" HorizontalAlignment="Left" Margin="95,519,0,0" VerticalAlignment="Top" Height="27" Width="140" FontSize="16" Grid.Column="1" Click="Button_Click"/>
+        <Image HorizontalAlignment="Left" Height="45" Margin="300,443,0,0" VerticalAlignment="Top" Width="228" Source="/Rákosi_Mátyás_aláírása.svg.png" Grid.Column="1"/>
+
+    </Grid>
+</Window>

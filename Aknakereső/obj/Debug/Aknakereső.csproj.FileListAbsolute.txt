@@ -13,3 +13,6 @@ C:\Users\baluv\source\repos\Aknakereső\Aknakereső\obj\Debug\Aknakereső.csproj
 C:\Users\baluv\source\repos\Aknakereső\Aknakereső\obj\Debug\Aknakereső.csproj.CoreCompileInputs.cache
 C:\Users\baluv\source\repos\Aknakereső\Aknakereső\obj\Debug\Aknakereső.exe
 C:\Users\baluv\source\repos\Aknakereső\Aknakereső\obj\Debug\Aknakereső.pdb
+C:\Users\baluv\source\repos\Aknakereső\Aknakereső\obj\Debug\Window1.g.cs
+C:\Users\baluv\source\repos\Aknakereső\Aknakereső\obj\Debug\Aknakereső_MarkupCompile.lref
+C:\Users\baluv\source\repos\Aknakereső\Aknakereső\obj\Debug\Window1.baml

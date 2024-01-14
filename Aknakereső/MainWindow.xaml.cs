@@ -91,7 +91,7 @@ namespace Minesweeper
             Tuple<int, int> coordinates = (Tuple<int, int>)button.Tag;
             int row = coordinates.Item1;
             int col = coordinates.Item2;
-            
+
             if (button.Content == null)
             {
                 button.Content = new Image
@@ -102,7 +102,7 @@ namespace Minesweeper
                     Stretch = Stretch.Fill,
                     Height = 25,
                     Width = 25
-                 
+
                 };
             }
             else if ((button.Content).GetType() == typeof(System.Windows.Controls.Image))
@@ -136,22 +136,27 @@ namespace Minesweeper
             }
             else
             {
-                
-                int adjacentMines = CountAdjacentMines(row, col);
-                button.Content = adjacentMines.ToString();
-                button.Background = (Brush)bc.ConvertFrom("#1d1d1b");
 
-                if (adjacentMines==0)
+                int adjacentMines = CountAdjacentMines(row, col);
+                if (CountAdjacentMines(row, col) == 0)
                 {
                     button.Content = " ";
+                    button.Background = (Brush)bc.ConvertFrom("#1d1d1b");
 
+                    
                 }
-
+                else
+                    button.Content = adjacentMines.ToString();
             }
+            CountAdjacentMines2();
+
         }
+    
+        
 
         private int CountAdjacentMines(int row, int col)
         {
+            var bc = new BrushConverter();
             int count = 0;
 
             for (int i = row - 1; i <= row + 1; i++)
@@ -164,7 +169,63 @@ namespace Minesweeper
                     }
                 }
             }
+            if (count == 0)
+            {
+                for (int i = row - 1; i <= row + 1; i++)
+                {
+                    for (int j = col - 1; j <= col + 1; j++)
+                    {
+                        if (i >= 0 && i < Rows && j >= 0 && j < Columns)
+                        {
 
+
+
+                            if (CountAdjacentMines3(i, j) == 0)
+                            {
+                                gridButtons[i, j].Content = " ";
+                                gridButtons[i, j].Background = (Brush)bc.ConvertFrom("#1d1d1b");
+                            }
+
+                            else
+                                gridButtons[i, j].Content = CountAdjacentMines3(i, j);
+                        }
+                    }
+                }
+            }
+
+
+            return count;
+        }
+        private void CountAdjacentMines2()
+        {
+
+            for (int i = 0; i <= Rows; i++)
+            {
+                for (int j = 0; j <= Columns; j++)
+                {
+                    if (i >= 0 && i < Rows && j >= 0 && j < Columns && gridButtons[i, j].Content == " ")
+                    {
+                        CountAdjacentMines(i, j);
+                    }
+                }
+            }
+        }
+        private int CountAdjacentMines3(int row, int col)
+        {
+
+
+            int count = 0;
+
+            for (int i = row - 1; i <= row + 1; i++)
+            {
+                for (int j = col - 1; j <= col + 1; j++)
+                {
+                    if (i >= 0 && i < Rows && j >= 0 && j < Columns && mineGrid[i, j])
+                    {
+                        count++;
+                    }
+                }
+            }
             return count;
         }
 

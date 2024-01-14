@@ -72,7 +72,7 @@ namespace Minesweeper
                         Foreground = (Brush)bc.ConvertFrom("#fccb39"),
                         BorderBrush = null,
                         FontFamily = new FontFamily("Soviet"),
-                        FontSize = 30
+                        FontSize = 30,
 
                     };
 
@@ -131,7 +131,7 @@ namespace Minesweeper
 
             if (mineGrid[row, col])
             {
-                MessageBox.Show("Kulákot találtál! Játék vége", "GAME OVER", MessageBoxButton.OK, MessageBoxImage.Error);
+                MessageBox.Show("Észrevett a kulák és felrobbantott... \nJáték vége!", "GAME OVER", MessageBoxButton.OK, MessageBoxImage.Error);
                 InitializeGame();
             }
             else
@@ -203,7 +203,7 @@ namespace Minesweeper
             {
                 for (int j = 0; j <= Columns; j++)
                 {
-                    if (i >= 0 && i < Rows && j >= 0 && j < Columns && gridButtons[i, j].Content == " ")
+                    if (i >= 0 && i < Rows && j >= 0 && j < Columns && Convert.ToString( gridButtons[i, j].Content )== " ")
                     {
                         CountAdjacentMines(i, j);
                     }

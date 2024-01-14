@@ -14,7 +14,7 @@
         <RichTextBox Margin="72,109,72,40" Background="#FFCCC0B2" BorderBrush="{x:Null}" FontFamily="Courier New" Grid.ColumnSpan="2">
             <FlowDocument>
                 <Paragraph TextAlignment="Center" FontSize="16">
-                    <Run Text="Megszaporodtak az államellenes cselekmények, sajnos a kulákok egyre többen vannak és egyre nagyobb tőkét halmoznak fel. Úgy gondolják ők irányíthatják a monkás embereket. De ez nem így van, mi nem hagyjuk!
+                    <Run Text="Megszaporodtak az államellenes cselekmények, sajnos a kulákok egyre többen vannak és egyre nagyobb tőkét halmoznak fel. Úgy gondolják ők irányíthatják a munkás embereket. De ez nem így van, mi nem hagyjuk!
 "/>
                 </Paragraph>
 

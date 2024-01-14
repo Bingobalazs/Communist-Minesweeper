@@ -68,7 +68,7 @@ namespace Minesweeper
                         Tag = new Tuple<int, int>(i, j),
                         Background = (Brush)bc.ConvertFrom("#db1017"),
                         BorderBrush = null,
-                        FontFamily = new FontFamily("Impact"),
+                        FontFamily = new FontFamily("Soviet"),
                         FontSize = 30
 
                     };
@@ -98,8 +98,8 @@ namespace Minesweeper
                     HorizontalAlignment = HorizontalAlignment.Center,
                     Stretch = Stretch.Fill,
                     Height = 25,
-                    Width = 25,
-                    ToolTip ="Megjelölve"
+                    Width = 25
+                 
                 };
             }
             else if ((button.Content).GetType() == typeof(System.Windows.Controls.Image))

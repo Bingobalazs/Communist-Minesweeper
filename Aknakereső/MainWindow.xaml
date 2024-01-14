@@ -3,7 +3,7 @@
 <Window x:Class="Minesweeper.MainWindow"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-        Title="Kulákkereső" Height="400" Width="520" Background="Black" Foreground="White" WindowStartupLocation="CenterScreen" Cursor="Cross">
+        Title="Kulákkereső" Height="400" Width="520" Background="Black" Foreground="White" WindowStartupLocation="CenterScreen" Cursor="Cross" FontFamily="Soviet" ResizeMode="NoResize" Icon="/flag1.png">
     <Grid Name="MinefieldGrid" HorizontalAlignment="Center" VerticalAlignment="Center">
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="Auto"/>
@@ -29,3 +29,4 @@
         </Grid.RowDefinitions>
     </Grid>
 </Window>
+
